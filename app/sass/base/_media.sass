@@ -6,6 +6,19 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .line-form
+    display: block
+    .form-labels-wrap
+      padding-left: 0
+      display: block
+      label
+        flex-grow: 1
+    .form-text
+      width: 100%
+      display: block
+      text-align: center
+      margin-bottom: 15px
+
   .top-contacts-wrap
     margin-left: 0
     justify-content: center
@@ -24,6 +37,16 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .s-intro
+    h1
+      font-size: 34px
+    h2
+      font-size: 22px
+
+  .top-line
+    padding-bottom: 20px
+
   .top-contacts-wrap
     .top-addr
       width: 50%
@@ -37,6 +60,24 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .s-intro
+    h1
+      font-size: 28px
+    h2
+      font-size: 18px
+
+  .line-form
+    .form-text
+      font-size: 18px
+    .add-wrap
+      flex-direction: column
+    label
+      width: 100%
+      margin-bottom: 15px
+    .btn
+      width: 100%
+      margin-bottom: 40px
 
   .top-contacts-wrap .top-addr
     max-width: 100%
@@ -54,6 +95,24 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .btn
+    span
+      display: none
+
+  .s-intro
+    padding-top: 75px
+
+  .line-form
+    padding-left: 30px
+    padding-right: 30px
+    .btn
+      margin-bottom: 15px
+    .form-text
+      font-size: 16px
+
+  .top-line
+    padding-bottom: 0
 
   .top-contacts-wrap
     width: 100%
@@ -76,6 +135,7 @@
     width: 100%
     text-align: center
     position: relative
+    z-index: 2
     &:before
       left: calc(50% - 17px)
       top: 15px
@@ -89,6 +149,7 @@
       top: 0
       left: -15px
       z-index: -1
+      box-shadow: 0 9px rgba($accent-blue, .6), 0 18px rgba($accent-blue, .4)
     a
       display: block
       margin-left: 0

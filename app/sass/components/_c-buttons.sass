@@ -1,0 +1,21 @@
+.btn
+  display: inline-block
+  cursor: pointer
+  border-radius: 5px
+  white-space: nowrap
+  border: none
+  box-shadow: none
+  font-weight: 700
+  font-family: "proximaNova", sans-serif
+  text-align: center
+  text-transform: uppercase
+  +mt(.3s)
+
+.btn-orange
+  background-color: $accent-orange
+  color: #000
+  &:hover
+    background-color: darken($accent-orange, 8%)
+    box-shadow: 3px 4px  rgba($accent-orange, .3)
+  &.disabled:hover
+    background-color: $accent-orange
