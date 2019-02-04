@@ -7,14 +7,15 @@
     display: flex
     justify-content: space-between
     align-items: center
+    position: relative
 
 .top-addr
   display: inline-block
-  //float: right
   font-size: 17px
-  line-height: 1
+  line-height: 1.2
   position: relative
   top: 2px
+  vertical-align: top
   &:before
     content: ''
     position: absolute
@@ -26,16 +27,16 @@
     background-repeat: no-repeat
     background-position: center center
     background-size: auto
-    top: -10px
+    top: calc(50% - 19px)
     left: -53px
 
 .top-phones
   display: inline-block
-  //float: right
   margin-left: 60px
   font-size: 19px
   line-height: 1
   position: relative
+  vertical-align: middle
   &:before
     content: ''
     position: absolute
@@ -47,7 +48,7 @@
     background-repeat: no-repeat
     background-position: center center
     background-size: auto
-    top: -8px
+    top: calc(50% - 19px)
     left: -34px
   a
     display: inline-block
@@ -55,3 +56,73 @@
     +mt(.3s)
     &:hover
       color: $accent-orange
+
+.top-contacts-wrap
+  margin-left: 110px
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  .top-addr
+    max-width: 40%
+
+.mnu-line
+  background-color: $accent-blue
+  color: #fff
+  line-height: 1
+.main-mnu
+  padding: 28px 0
+  li
+    display: inline-block
+    font-family: "proximaNova", sans-serif
+    text-transform: uppercase
+    margin-right: 60px
+    +mt(.3s)
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      width: 0
+      bottom: -6px
+      height: 2px
+      background-color: $accent-orange
+      left: 50%
+      +mt(.3s)
+    &:hover
+      color: $accent-orange
+      &:after
+        width: 100%
+        left: 0
+    &:last-child
+      margin-right: 0
+
+
+.hamburger
+  position: absolute
+  right: 0
+  top: 24px
+
+.hamburger, .hamburger.is-active
+  .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+    background-color: darken($accent-blue, 5%)
+
+//mmenu
+.mm-menu_theme-dark
+  background-color: $accent-blue
+  text-transform: uppercase
+
+.mm-logo
+  display: block
+  margin: 0 auto
+  transform: scaleY(.75)
+
+.mm-navbars_top
+  border-color: transparent
+
+.mm-listitem, .mm-listitem .mm-btn_next, .mm-listitem .mm-btn_next:before, .mm-listitem:after, .mm-listview
+  border-color: lighten($accent-blue, 20%)
+
+.mm-listitem
+  a
+    padding-top: 14px
+    padding-bottom: 12px
+//end mmenu

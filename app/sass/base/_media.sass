@@ -5,6 +5,16 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .top-contacts-wrap
+    margin-left: 0
+    justify-content: center
+
+  .main-mnu
+    margin-top: 15px
+    li
+      margin-right: 45px
+
   .top-line
     .container
       flex-direction: column
@@ -14,9 +24,24 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+  .top-contacts-wrap
+    .top-addr
+      width: 50%
+      margin-left: 40px
+  .top-phones
+    a
+      margin-bottom: 5px
+      &:last-child
+        margin-bottom: 0
+
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .top-contacts-wrap .top-addr
+    max-width: 100%
+    width: auto
+
   .top-contacts-wrap
     display: flex
     flex-direction: column
@@ -30,7 +55,12 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
-  .top-addr, .top-phones
+  .top-contacts-wrap
+    width: 100%
+    .top-addr
+      margin-left: 0
+
+  .top-addr
     text-align: center
     width: 100%
     margin-left: 0
@@ -39,12 +69,33 @@
       left: calc(50% - 17px)
       top: -50px
   .top-phones
-    margin-top: 70px
+    padding-top: 70px
+    padding-bottom: 20px
+    color: #fff
+    background-color: $accent-blue
+    width: 100%
+    text-align: center
+    position: relative
+    &:before
+      left: calc(50% - 17px)
+      top: 15px
+      border-color: #fff
+    &:after
+      content: ''
+      width: calc(100% + 30px)
+      height: 100%
+      background-color: $accent-blue
+      position: absolute
+      top: 0
+      left: -15px
+      z-index: -1
     a
+      display: block
       margin-left: 0
-      margin-bottom: 10px
+      margin-bottom: 15px
   .logo
-    margin-bottom: 15px
+    margin-bottom: 25px
+    width: 100%
 
 
 /*==========  Mobile First  ==========*/
