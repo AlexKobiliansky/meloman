@@ -1,0 +1,57 @@
+.main-head
+
+.top-line
+  padding: 13px 0
+  line-height: 1
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.top-addr
+  display: inline-block
+  //float: right
+  font-size: 17px
+  line-height: 1
+  position: relative
+  top: 2px
+  &:before
+    content: ''
+    position: absolute
+    width: 34px
+    height: 34px
+    border: 1px solid #c3c3c3
+    border-radius: 50%
+    background-image: url('../img/icons/map-icon.png')
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: auto
+    top: -10px
+    left: -53px
+
+.top-phones
+  display: inline-block
+  //float: right
+  margin-left: 60px
+  font-size: 19px
+  line-height: 1
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    width: 34px
+    height: 34px
+    border: 1px solid #c3c3c3
+    border-radius: 50%
+    background-image: url('../img/icons/phone-icon.png')
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: auto
+    top: -8px
+    left: -34px
+  a
+    display: inline-block
+    margin-left: 21px
+    +mt(.3s)
+    &:hover
+      color: $accent-orange
