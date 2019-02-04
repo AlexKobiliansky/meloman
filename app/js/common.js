@@ -2,15 +2,6 @@ $(document).ready(function(){
     /**
      * mobile-mnu customization
      */
-    // var $toggleMenu = $(".toggle-mnu");
-
-    // $toggleMenu.click(function() {
-    //     $(this).toggleClass("on");
-    //     // return false;
-    // });
-
-
-
     var mmenu = $('#mobile-mnu');
     var menuLogo = mmenu.data("logo");
     var $mmenu = mmenu.mmenu({

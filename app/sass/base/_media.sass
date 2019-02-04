@@ -3,8 +3,37 @@
 
 /*==========  Desktop First  ==========*/
 
+@media screen and (max-width: 1600px)
+  .course-item-title
+    margin-top: 110px
+
+
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .courses-wrap
+    padding-left: 12.5px
+    padding-right: 12.5px
+
+  .course-item
+    font-size: 16px
+    padding-left: 40px
+    &-title
+      &:before
+        width: 16px
+        left: -40px
+        top: 9px
+      &:after
+        top: 6px
+    &:hover
+      .course-item-title
+        &:before
+          left: -40px
+          width: 16px
+          background-color: #706f71
+        &:after
+          left: -20px
+
 
   .line-form
     display: block
@@ -38,6 +67,19 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .s-padding
+    padding: 50px 0 60px
+
+  .section-title
+    h2
+      font-size: 30px
+
+  .courses-wrap
+    margin-top: 40px
+
+  .course-item
+    width: calc(33.333% - 5px)
+
   .s-intro
     h1
       font-size: 34px
@@ -60,6 +102,20 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .section-title
+    h2
+      &:before
+        top: auto
+        bottom: -20px
+        left: calc(50% - 7px)
+      &:after
+        top: auto
+        bottom: -20px
+        right: calc(50% - 7px)
+
+  .course-item
+    width: calc(50% - 5px)
 
   .s-intro
     h1
@@ -95,6 +151,26 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .section-title
+    h2
+      font-size: 24px
+
+  .course-item
+    width: 100%
+    margin-right: 0
+    margin-left: 0
+    padding-left: 60px
+    &-title
+      margin-top: 130px
+      &:before
+        left: -60px
+        width: 36px
+    &:hover
+      .course-item-title
+        &:before
+          width: 36px
+          left: -60px
 
   .btn
     span
