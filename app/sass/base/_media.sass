@@ -87,6 +87,9 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .s-teachers-slide
+    height: 392px
+
   .checks-wrap
     flex-wrap: wrap
 
@@ -157,6 +160,12 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .s-teachers-slide
+    height: 457px
+
+  .teacher-slide-img
+    height: 315px
+
   .check-item
     width: 50%
 
@@ -164,6 +173,8 @@
     max-width: 100%
     align-items: center
     margin-top: 40px
+    &:before
+      left: 0
   .about-img-item
     display: none
     &:first-child
@@ -176,11 +187,11 @@
     h2
       &:before
         top: auto
-        bottom: -20px
+        bottom: -14px
         left: calc(50% - 7px)
       &:after
         top: auto
-        bottom: -20px
+        bottom: -14px
         right: calc(50% - 7px)
 
   .course-item
@@ -220,6 +231,13 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .teacher-slide-img
+    height: 324px
+
+  .about-images
+    &:before
+      display: none
 
   .check-item
     width: 100%

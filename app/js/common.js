@@ -68,10 +68,39 @@ $(document).ready(function(){
 
     $('.about-images').photoswipe();
 
+    $('.teachers-slider').owlCarousel({
+        loop:true,
+        margin:15,
+        responsive : {
+            0 : {
+                items: 1,
+                dotsEach: 1
+            },
+            480 : {
+                items: 2,
+                dotsEach: 2
+            },
+            768: {
+                items: 3,
+                dotsEach: 3
+            },
+            992: {
+                items: 4,
+                dotsEach: 3
+            },
+            1200 : {
+                items: 5,
+                dotsEach: 3
+            }
+        }
+    });
+
 
     function heightses() {
         if ($(window).width()>480) {
             $('.check-item-title').height('auto').equalHeights();
+            $('.teacher-slide-title').height('auto').equalHeights();
+            $('.teacher-slide-post').height('auto').equalHeights();
         }
     }
 
@@ -80,10 +109,6 @@ $(document).ready(function(){
     });
 
     heightses();
-
-
-
-
 
     $('img.svg').each(function(){
         var $img = jQuery(this);

@@ -4,6 +4,17 @@
   display: flex
   flex-flow: column wrap
   height: 495px
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    width: 140px
+    height: 395px
+    +bg-cover
+    background-image: url('../img/bg-about.png')
+    left: -98px
+    top: 50px
+
 .about-img-item
   width: 247px
   height: 245px
@@ -16,7 +27,7 @@
     top: 0
     right: 0
     bottom: 0
-    background-color: rgba(#000, .4)
+    background-color: rgba(#000, .2)
     cursor: pointer
     +mt(.2s)
     z-index: 1
