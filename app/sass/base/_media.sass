@@ -11,6 +11,26 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .about-images
+    height: 402px
+  .about-img-item
+    width: 200px
+    height: 198.45px
+    &:first-child
+      width: 243px
+      height: 401px
+      img
+        width: 243px
+    &:nth-child(2)
+      margin-bottom: 5px
+  .about-img-item
+    img
+      left: -80px
+
+  .about-main-desc
+    padding: 0
+
+
   .courses-wrap
     padding-left: 12.5px
     padding-right: 12.5px
@@ -67,6 +87,40 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .checks-wrap
+    flex-wrap: wrap
+
+  .check-item
+    width: 33%
+
+  .about-main-desc
+    margin-bottom: 30px
+    .section-title
+      text-align: center
+
+  .section-title.no-dots
+    h2
+      &:before, &:after
+        display: block
+
+  .about-images
+    flex-flow: column wrap
+    height: 496px
+    max-width: 555px
+    margin-left: auto
+    margin-right: auto
+  .about-img-item
+    width: 247px
+    height: 245px
+    &:first-child
+      width: 300px
+      height: 496px
+      img
+        left: 0
+        width: 300px
+    &:nth-child(2)
+      margin-bottom: 5px
+
   .s-padding
     padding: 50px 0 60px
 
@@ -102,6 +156,21 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .check-item
+    width: 50%
+
+  .about-images
+    max-width: 100%
+    align-items: center
+    margin-top: 40px
+  .about-img-item
+    display: none
+    &:first-child
+      display: block
+      width: auto
+      height: auto
+      transform: scaleY(1.1)
 
   .section-title
     h2
@@ -151,6 +220,9 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .check-item
+    width: 100%
 
   .section-title
     h2

@@ -1,0 +1,92 @@
+.s-about
+
+.about-images
+  display: flex
+  flex-flow: column wrap
+  height: 495px
+.about-img-item
+  width: 247px
+  height: 245px
+  background-color: #262626
+  position: relative
+  &:after
+    position: absolute
+    content: ''
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(#000, .4)
+    cursor: pointer
+    +mt(.2s)
+    z-index: 1
+  &:hover
+    &:after
+      background-color: rgba(#000, 0)
+      z-index: -1
+  &:first-child
+    width: 300px
+    height: 496px
+    img
+      left: 0
+      width: 300px
+  &:nth-child(2)
+    margin-bottom: 5px
+
+.about-img-item
+  overflow: hidden
+  img
+    height: 100%
+    width: auto
+    position: relative
+    left: -100px
+
+
+.about-main-desc
+  text-align: left
+  padding: 30px 0 0 50px
+  color: #2c2c2c
+  .section-title
+    text-align: left
+    margin-bottom: 30px
+
+.checks-wrap
+  margin-top: 120px
+  display: flex
+  justify-content: space-between
+
+.check-item
+  position: relative
+  padding: 122px 15px 0
+  text-align: center
+  margin-bottom: 30px
+  flex-grow: 1
+  width: 20%
+  &-title
+    font-weight: 500
+    color: #2c2c2c
+    line-height: 1.25
+    margin-bottom: 12px
+  &-desc
+    font-size: 13px
+    line-height: 1.5
+  &:before
+    content: ''
+    position: absolute
+    width: 78px
+    height: 78px
+    border-radius: 50%
+    background-image: url('../img/check-img.png')
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: contain
+    top: 0
+    left: calc(50% - 39px)
+  &:after
+    content: ''
+    position: absolute
+    height: 14px
+    width: 1px
+    background-color: #d1d1d1
+    top: 93px
+    left: calc(50% - 0.5px)

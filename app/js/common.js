@@ -66,6 +66,21 @@ $(document).ready(function(){
      * end FORMS
      */
 
+    $('.about-images').photoswipe();
+
+
+    function heightses() {
+        if ($(window).width()>480) {
+            $('.check-item-title').height('auto').equalHeights();
+        }
+    }
+
+    $(window).resize(function() {
+        heightses();
+    });
+
+    heightses();
+
 
 
 
