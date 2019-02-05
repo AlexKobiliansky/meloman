@@ -101,6 +101,7 @@ $(document).ready(function(){
             $('.check-item-title').height('auto').equalHeights();
             $('.teacher-slide-title').height('auto').equalHeights();
             $('.teacher-slide-post').height('auto').equalHeights();
+            $('.event-item-title').height('auto').equalHeights();
         }
     }
 

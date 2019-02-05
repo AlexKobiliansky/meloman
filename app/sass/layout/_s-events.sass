@@ -1,0 +1,44 @@
+.s-events
+  margin-top: 225px
+
+.events-wrap
+  margin-top: 65px
+
+.event-item
+  display: block
+  padding: 13px 13px 30px
+  background-color: $accent-creamy
+  border-radius: 8px
+  width: 100%
+  +mt(.3s)
+  &-img
+    display: block
+    height: 190px
+    +bg-cover()
+    margin-bottom: 20px
+    position: relative
+    &:after
+      +overlay
+      background-color: rgba(#000, .2)
+      opacity: 0
+      +mt(.3s)
+  &-title
+    font-weight: 500
+    color: #000
+    font-size: 19px
+    display: block
+    padding: 0 15px
+    margin-bottom: 15px
+    +mt(.3s)
+  &-date
+    display: block
+    padding-left: 15px
+    font-size: 11px
+    color: #acbac4
+  &:hover
+    box-shadow: 0 0 20px 5px rgba($accent-blue, .2)
+    .event-item-title
+      color: $accent-orange
+    .event-item-img
+      &:after
+        //opacity: 1
