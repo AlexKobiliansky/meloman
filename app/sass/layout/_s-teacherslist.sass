@@ -1,0 +1,69 @@
+.s-teacherslist
+
+.teacherlist-wrap
+  margin-top: 35px
+  padding-bottom: 35px
+
+.teacherlist-item
+  display: block
+  margin-bottom: 30px
+  border: 1px solid #d0e7f5
+  border-radius: 10px
+  overflow: hidden
+  width: 100%
+  position: relative
+  +mt(.5s)
+  &-img
+    display: block
+    height: 360px
+    width: 100%
+    +bg-cover
+    position: relative
+    &:after
+      +overlay
+      background-color: rgba(#000, .4)
+      +mt(.5s)
+      opacity: 0
+  &-desc
+    display: block
+    background-color: #fff
+    padding: 25px 30px 40px
+  &-title
+    display: block
+    text-align: center
+    font-size: 15px
+    text-transform: uppercase
+    font-weight: 700
+    position: relative
+    margin-bottom: 25px
+    &:after
+      position: absolute
+      content: ''
+      height: 1px
+      width: 34px
+      background-color: $accent-blue
+      left: calc(50% - 17px)
+      bottom: -10px
+  &-post
+    display: block
+    font-size: 14px
+    text-align: center
+  .btn
+    position: absolute
+    display: block
+    width: 150px
+    padding: 17px 0
+    top: 150px
+    left: calc(50% - 75px)
+    +mt(.5s)
+    opacity: 0
+    &:hover
+      box-shadow: none
+      text-decoration: underline
+  &:hover
+    box-shadow: 0 0 20px 5px rgba($accent-blue, .2)
+    .teacherlist-item-img
+      &:after
+        opacity: 1
+    .btn
+      opacity: 1
