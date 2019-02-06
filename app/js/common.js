@@ -103,6 +103,11 @@ $(document).ready(function(){
             $('.teacher-slide-post').height('auto').equalHeights();
             $('.event-item-title').height('auto').equalHeights();
         }
+
+        if ($(window).width()>=768) {
+            $('.textcom-item-name').height('auto').equalHeights();
+        }
+
     }
 
     $(window).resize(function() {
@@ -196,6 +201,42 @@ $(document).ready(function(){
      * end YOUTUBE SCRIPT
      */
 
+
+    /**
+     * TEXTCOMS FUNCTIONALITY
+     */
+     $('.textcom-item').each(function(){
+        var th = $(this),
+            link = th.find('.textcom-item-roll');
+
+        link.on('click', function(e){
+            e.preventDefault();
+
+            th.toggleClass('active');
+
+            link.text(function(i, text){
+                return text === "Раскрыть отзыв" ? "Свернуть отзыв" : "Раскрыть отзыв";
+            })
+
+            // if (!th.hasClass('active')){
+            //     th.addClass('active');
+            //     link.text('Свернуть отзыв');
+            // } else {
+            //     th.removeClass('active');
+            //     link.text('Раскрыть отзыв');
+            // }
+
+
+        })
+
+
+
+
+     });
+    /**
+     * end TEXTCOMS FUNCTIONALITY
+     */
+
     // $('img.svg').each(function(){
     //     var $img = jQuery(this);
     //     var imgID = $img.attr('id');
@@ -232,7 +273,6 @@ $(document).ready(function(){
     /**
      * YA-MAPS
      */
-
     //Переменная для включения/отключения индикатора загрузки
     var spinner = $('.loader');
     //Переменная для определения была ли хоть раз загружена Яндекс.Карта (чтобы избежать повторной загрузки при наведении)
@@ -294,35 +334,6 @@ $(document).ready(function(){
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // var myMapTemp = new ymaps.Map("map", {
-        //     center: [55.730138, 37.594238], // координаты центра на карте
-        //     zoom: 7, // коэффициент приближения карты
-        //     controls: ['zoomControl', 'fullscreenControl'] // выбираем только те функции, которые необходимы при использовании
-        // });
-        // var myPlacemarkTemp = new ymaps.GeoObject({
-        //     geometry: {
-        //         type: "Point",
-        //         coordinates: [55.730138, 37.594238] // координаты, где будет размещаться флажок на карте
-        //     }
-        // });
-        // myMapTemp.geoObjects.add(myPlacemarkTemp); // помещаем флажок на карту
-
         // Получаем первый экземпляр коллекции слоев, потом первый слой коллекции
         var layer = map.layers.get(0).get(0);
 
@@ -368,13 +379,7 @@ $(document).ready(function(){
     }
 
 
-
-
-
-
-
-
-// Функция загрузки API Яндекс.Карт по требованию (в нашем случае при наведении)
+    // Функция загрузки API Яндекс.Карт по требованию (в нашем случае при наведении)
     function loadScript(url, callback){
         var script = document.createElement("script");
 
@@ -396,7 +401,7 @@ $(document).ready(function(){
         document.getElementsByTagName("head")[0].appendChild(script);
     }
 
-// Основная функция, которая проверяет когда мы навели на блок с классом &#34;ymap-container&#34;
+    // Основная функция, которая проверяет когда мы навели на блок с классом &#34;ymap-container&#34;
     var ymap = function() {
         $('.s-map').on( "mouseenter", function(){
             if (!check_if_load) { // проверяем первый ли раз загружается Яндекс.Карта, если да, то загружаем
@@ -414,46 +419,9 @@ $(document).ready(function(){
                 });
             }
         });
-    }
+    };
 
     ymap();
-
-
-    //
-    // $(function() {
-    //
-    //     //Запускаем основную функцию
-    //     //ymap();
-    //
-    // });
-    //
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // ymaps.ready(function(){
-    //
-    // });
     /**
      * end YA-MAPS
      */

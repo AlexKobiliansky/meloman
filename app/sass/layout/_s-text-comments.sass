@@ -1,0 +1,51 @@
+.s-text-comments
+
+.textcoms-wrap
+  margin-top: 40px
+
+.textcom-item
+  font-family: "proximaNova", sans-serif
+  border-radius: 12px
+  overflow: hidden
+  margin-bottom: 25px
+  display: table
+  &-img
+    display: table-cell
+    //float: left
+    width: 165px
+    //height: 230px
+    background-color: #cedae2
+    margin-right: 25px
+    +bg-cover
+  &-desc
+    background-color: #eef4f8
+    padding: 25px 15px 25px 25px
+  &-name
+    font-weight: 700
+    font-size: 20px
+    margin-bottom: 15px
+  &-text
+    font-size: 14px
+    line-height: 1.6
+    height: 105px
+    overflow: hidden
+    margin-bottom: 10px
+    p
+      margin-bottom: 0
+  a.textcom-item-roll
+    font-size: 14px
+    color: $accent-blue
+    text-decoration: underline
+    &:active, &:focus
+      text-decoration: underline
+    &:hover
+      text-decoration: none
+  &.active
+    .textcom-item-img
+      height: 230px
+      display: block
+      float: left
+    .textcom-item-text
+      height: auto
+    .textcom-item-roll
+      margin-left: 165px
