@@ -1,0 +1,26 @@
+.s-form
+  background-color: #292929
+  position: relative
+  padding: 100px 0 60px
+  color: #fff
+  +bg-cover
+  h2
+    font-weight: 700
+    font-size: 22px
+    text-transform: uppercase
+    margin-bottom: 20px
+    span
+      background-color: #000
+      color: $accent-orange
+      display: inline-block
+      padding: 3px 5px 1px
+      border-radius: 3px
+  p
+    font-size: 15px
+  &:after
+    +overlay
+    background-color: rgba(#000, .5)
+  .container
+    position: relative
+    z-index: 2
+
