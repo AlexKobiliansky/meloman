@@ -1,0 +1,45 @@
+.s-video-comments
+  padding-bottom: 60px
+
+.videocoms-wrap
+  margin-top: 80px
+
+.videocom-item
+  position: relative
+  margin-bottom: 30px
+
+.video-item
+  height: 250px
+  width: 100%
+  background-color: darken($accent-creamy, 10%)
+.thumbnail-container
+  +bg-cover
+  position: relative
+  &:after
+    +overlay()
+    +mt(.3s)
+    background-color: rgba(#000, .4)
+    opacity: 1
+    z-index: 1
+
+.btn-play
+  position: absolute
+  width: 60px
+  height: 60px
+  background-color: $accent-orange
+  border-radius: 50%
+  left: calc(50% - 30px)
+  top: calc(50% - 30px)
+  z-index: 3
+  cursor: pointer
+  &:after
+    content: ''
+    position: absolute
+    border: 9px solid transparent
+    border-left: 16px solid #fff
+    left: 24px
+    top: 20px
+  &:hover
+    background-color: rgba($accent-creamy, .5)
+    &:after
+      border-left-color: $accent-orange
