@@ -44,28 +44,6 @@ $(document).ready(function(){
      * end mobile-mnu customization
      */
 
-
-    /**
-     * FORMS
-     */
-
-    var uPhone = $('.user-phone');
-    uPhone.mask("+7 (999) 999-99-99",{autoclear: false});
-
-    uPhone.on('click', function (ele) {
-        var needelem = ele.target || event.srcElement;
-        needelem.setSelectionRange(4,4);
-        needelem.focus();
-    });
-
-    $.validate({
-        form : '.contact-form',
-        scrollToTopOnError: false
-    });
-    /**
-     * end FORMS
-     */
-
     $('.about-images').photoswipe();
 
     $('.teachers-slider').owlCarousel({
@@ -95,6 +73,15 @@ $(document).ready(function(){
         }
     });
 
+    $('.who-slider').owlCarousel({
+       loop: true,
+       items: 1,
+        margin: 30,
+        nav: true,
+        navText: ['', ''],
+        dots: true
+    });
+
 
     function heightses() {
         if ($(window).width()>480) {
@@ -119,25 +106,7 @@ $(document).ready(function(){
     heightses();
 
 
-    $(function() {
-        $("a[href='#teacher-form']").magnificPopup({
-            type: "inline",
-            fixedContentPos: !1,
-            fixedBgPos: !0,
-            overflowY: "auto",
-            closeBtnInside: !0,
-            preloader: !1,
-            midClick: !0,
-            removalDelay: 300,
-            mainClass: "my-mfp-zoom-in"
-        })
-    });
 
-    $("a[href='#teacher-form']").on('click', function(){
-        var name = $(this).data('name');
-        $('#teacher-form h3 span').text(name);
-        $('#teacher-form #name').val(name);
-    });
 
     /**
      * YOUTUBE SCRIPT
@@ -414,6 +383,73 @@ $(document).ready(function(){
      */
 
 
+    /**
+     * FORMS
+     */
+
+    var uPhone = $('.user-phone');
+    uPhone.mask("+7 (999) 999-99-99",{autoclear: false});
+
+    uPhone.on('click', function (ele) {
+        var needelem = ele.target || event.srcElement;
+        needelem.setSelectionRange(4,4);
+        needelem.focus();
+    });
+
+    $.validate({
+        form : '.contact-form',
+        scrollToTopOnError: false
+    });
+
+
+    $(function() {
+        $("a[href='#teacher-form']").magnificPopup({
+            type: "inline",
+            fixedContentPos: !1,
+            fixedBgPos: !0,
+            overflowY: "auto",
+            closeBtnInside: !0,
+            preloader: !1,
+            midClick: !0,
+            removalDelay: 300,
+            mainClass: "my-mfp-zoom-in"
+        })
+    });
+
+    $("a[href='#teacher-form']").on('click', function(){
+        var name = $(this).data('name');
+
+        $('#teacher-form h3 span').text(name);
+        $('#teacher-form #name').val(name);
+
+    });
+
+
+    $("a[href='#course-form']").on('click', function(){
+        var name = $(this).data('name'),
+            course = $(this).data('course');
+        $('#course-form h3 span').text(name);
+        $('#course-form #teacher-name').val(name);
+        $('#course-form #course-name').val(course);
+    });
+
+
+
+
+    $(function() {
+        $("a[href='#course-form']").magnificPopup({
+            type: "inline",
+            fixedContentPos: !1,
+            fixedBgPos: !0,
+            overflowY: "auto",
+            closeBtnInside: !0,
+            preloader: !1,
+            midClick: !0,
+            removalDelay: 300,
+            mainClass: "my-mfp-zoom-in"
+        })
+    });
+
     $('#agreement-label').on('click', function(){
         var th = $(this);
         th.toggleClass('checked');
@@ -421,8 +457,6 @@ $(document).ready(function(){
             th.removeClass('has-error')
         }
     });
-
-
 
     //E-mail Ajax Send
     $(".contact-form").submit(function() { //Change
@@ -453,4 +487,8 @@ $(document).ready(function(){
         });
         return false;
     });
+
+    /**
+     * end FORMS
+     */
 });

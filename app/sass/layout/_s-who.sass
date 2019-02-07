@@ -1,0 +1,59 @@
+.s-who
+
+.who-slider
+  margin-top: 90px
+
+.who-slide
+  display: flex
+  .item
+    width: 50%
+    &:first-child
+      padding-right: 30px
+    &:last-child
+      padding-left: 30px
+
+.who-info
+  &-name
+    font-size: 22px
+    font-weight: 500
+    color: $accent-blue
+    margin-bottom: 10px
+  &-post
+    color: #838383
+    margin-bottom: 25px
+  &-item
+    font-size: 14px
+    margin-bottom: 30px
+    h4
+      font-weight: 500
+      font-size: 16px
+      margin-bottom: 10px
+    p
+      margin-bottom: 5px
+  .btn
+    padding: 15px 30px
+
+.who-slider
+  position: relative
+  .owl-dots
+    display: none
+  .owl-nav
+    position: absolute
+    top: calc(50% - 24px)
+    width: 100%
+    button.owl-prev, button.owl-next
+      width: 25px
+      height: 27px
+      +bg-cover
+      +mt(.3s)
+      position: absolute
+    button.owl-prev
+      background-image: url('../img/icons/how-prev.png')
+      left: -120px
+      &:hover
+        background-image: url('../img/icons/how-prev-a.png')
+    button.owl-next
+      background-image: url('../img/icons/how-next.png')
+      right: -120px
+      &:hover
+        background-image: url('../img/icons/how-next-a.png')

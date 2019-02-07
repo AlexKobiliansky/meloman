@@ -106,6 +106,21 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+
+
+  .who-slider
+    margin-top: 40px
+    .owl-nav
+      button.owl-prev
+        left: -50px
+      button.owl-next
+        right: -50px
+    .btn
+      padding-left: 45px
+      padding-right: 45px
+      span
+        display: none!important
+
   .learn-item
     padding-left: 0
     padding-right: 0
@@ -221,6 +236,40 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .who-slide
+    .item:first-child
+      padding-right: 10px
+    .item:last-child
+      padding-left: 10px
+
+  .who-slider
+    padding-bottom: 50px
+    .owl-nav
+      top: auto
+      bottom: 0
+      button.owl-prev
+        left: 50px
+        z-index: 2
+      button.owl-next
+        right: 50px
+        z-index: 2
+    .owl-dots
+      display: block
+      text-align: center
+      position: absolute
+      bottom: -27px
+      width: 100%
+      button.owl-dot
+        width: 14px
+        height: 14px
+        background-color: #cecece
+        display: inline-block
+        margin: 0 6px
+        border-radius: 50%
+        &.active
+          background-color: $accent-orange
+
 
   .doing-item
     height: 300px
@@ -357,6 +406,20 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .who-slider
+    margin-top: 30px
+
+  .who-slide
+    flex-direction: column
+    text-align: center
+    .item
+      width: 100%
+      &:first-child
+        padding-right: 0
+        margin-bottom: 30px
+      &:last-child
+        padding-left: 0
 
   .s-how, .s-learn
     .section-title
