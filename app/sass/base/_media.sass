@@ -106,7 +106,11 @@
 // ≥992px
 +media-breakpoint-down(md)
 
-
+  .result-item
+    .video-item
+      height: 250px
+    &-desc
+      padding: 35px 25px
 
   .who-slider
     margin-top: 40px
@@ -236,6 +240,10 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .result-item
+    .video-item
+      height: 285px
 
   .who-slide
     .item:first-child
@@ -406,6 +414,14 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .s-results
+    padding-bottom: 30px
+
+  .result-item
+    .video-item
+      height: 192px
+
 
   .who-slider
     margin-top: 30px

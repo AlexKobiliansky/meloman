@@ -285,7 +285,7 @@ $(document).ready(function(){
 
 
         if ($(window).width() < 480) {
-            map.behaviors.disable('drag');
+            // map.behaviors.disable('drag');
             map.setGlobalPixelCenter([ position[0], position[1] - 150]);
         }
 
