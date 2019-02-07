@@ -1,0 +1,32 @@
+.s-chars
+
+.chars-wrap
+  display: flex
+  justify-content: space-between
+  margin-bottom: 80px
+
+.char-item
+  width: 20%
+  text-align: center
+  padding: 0 15px
+  &-img
+    margin-bottom: 35px
+    .svg
+      fill: $accent-blue
+      width: 60px
+      height: 60px
+  &-title
+    font-size: 18px
+    font-weight: 500
+    margin-bottom: 25px
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      width: 24px
+      height: 1px
+      background-color: $accent-orange
+      bottom: -13px
+      left: calc(50% - 12px)
+  &-desc
+    font-size: 14px

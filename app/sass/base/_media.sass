@@ -96,6 +96,19 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .chars-wrap
+    flex-wrap: wrap
+    justify-content: center
+
+  .char-item
+    width: 33.333%
+    margin-bottom: 40px
+
+  .course-img
+    width: 350px
+    margin-right: 25px
+    margin-bottom: 15px
+
   .teacher-info
     padding-left: 0
 
@@ -181,6 +194,17 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .char-item
+    width: 50%
+    &-img
+      margin-bottom: 10px
+
+  .course-img
+    width: 100%
+    float: none
+    margin-right: 0
+    margin-bottom: 30px
 
   .s-teacher
     padding-bottom: 40px
@@ -288,6 +312,9 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .char-item
+    width: 100%
 
   .teacher-img
     height: 400px
