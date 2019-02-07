@@ -146,7 +146,6 @@ $(document).ready(function(){
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    var videoPlayer;
     var videoPlayers = [];
     var i = 0;
 
@@ -157,26 +156,6 @@ $(document).ready(function(){
             var $start = $(this).siblings('.start-video');
 
             $start.attr("data-playern", i);
-
-            // videoPlayers[i] = new YT.Player($playerID, {
-            //     videoId: $videoID,
-            //     playerVars: {
-            //         'autoplay': 0,
-            //         'rel': 0,
-            //         'showinfo': 0
-            //     },
-            //     events: {
-            //         'onStateChange': onPlayerStateChange
-            //     }
-            // });
-            //
-            // $start.on('click', function(){
-            //     var playerN = $(this).attr("data-playern");
-            //     $(this).hide();
-            //     $(this).siblings('.you-player').show();
-            //     $(this).siblings('.thumbnail-container').hide();
-            //     videoPlayers[playerN].playVideo();
-            // });
 
             $start.on('click', function(){
                 var playerN = $(this).attr("data-playern");
@@ -433,9 +412,30 @@ $(document).ready(function(){
      * end YA-MAPS
      */
 
-    //E-mail Ajax Send
-    $("form").submit(function() { //Change
+
+    $('#agreement-label').on('click', function(){
         var th = $(this);
+        th.toggleClass('checked');
+        if(th.hasClass('has-error')) {
+            th.removeClass('has-error')
+        }
+    });
+
+
+
+    //E-mail Ajax Send
+    $(".contact-form").submit(function() { //Change
+        var th = $(this);
+
+        if(th.hasClass('check-form')) {
+            var check = $('#agreement-label');
+            if(!check.hasClass('checked')) {
+                check.addClass('has-error');
+                return false;
+            }
+
+        }
+
         t = th.find(".btn").text();
         th.find(".btn").prop("disabled", "disabled").addClass("disabled").text("Заявка отправлена!");
 
@@ -447,6 +447,7 @@ $(document).ready(function(){
             setTimeout(function() {
                 th.find(".btn").removeAttr('disabled').removeClass("disabled").text(t);
                 th.trigger("reset");
+                $.magnificPopup.close();
             }, 2000);
         });
         return false;

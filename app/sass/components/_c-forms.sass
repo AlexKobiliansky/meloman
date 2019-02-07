@@ -98,4 +98,74 @@
       margin-bottom: 30px
 
 
+.blue-form
+  background-color: $accent-blue
+  border: 22px solid $accent-blue
+  border-radius: 15px
+  .form-content
+    border-radius: 15px
+    background-color: #3ca1e4
+    padding: 25px 35px 30px
+    color: #fff
+  .form-text
+    font-weight: 500
+    font-size: 18px
+    text-align: center
+    margin-bottom: 30px
+    span
+      color: #fff36c
+  label
+    margin-bottom: 15px
+    max-width: 290px
+    margin-left: auto
+    margin-right: auto
+  .btn
+    padding: 17px
+    width: 290px
+    display: block
+    margin-left: auto
+    margin-right: auto
+  .agreement
+    position: absolute
+    z-index: -1
+    opacity: 0
+    width: 17px
+    height: 17px
+    top: 0
+    left: 0
 
+#agreement-label
+  z-index: 2
+  padding-left: 27px
+  position: relative
+  cursor: pointer
+  &:before
+    content: ''
+    position: absolute
+    width: 13px
+    height: 13px
+    border-radius: 3px
+    background-color: #fff
+    left: 3px
+    top: 5px
+    cursor: pointer
+    border: 1px solid transparent
+  &:after
+    content: ''
+    position: absolute
+    width: 18px
+    height: 18px
+    +bg-cover
+    background-image: url('../img/icons/check-angle.png')
+    left: 2px
+    top: 2px
+    transform: scale(.7)
+    opacity: 0
+    +mt(.3s)
+  &.checked
+    &:after
+      transform: scale(1)
+      opacity: 1
+  &.has-error
+    &:before
+      border-color: red

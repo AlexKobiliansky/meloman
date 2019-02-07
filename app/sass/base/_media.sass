@@ -11,6 +11,9 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .how-content
+    padding-right: 0
+
   .map-block
     left: calc((100vw - 960px)/2)
 
@@ -96,9 +99,19 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .blue-form
+    label
+      max-width: 100%
+    .btn
+      width: 100%
+      margin-top: 25px
+      margin-bottom: 10px
   .chars-wrap
     flex-wrap: wrap
     justify-content: center
+    margin-bottom: 20px
+  .how-content
+    margin-bottom: 30px
 
   .char-item
     width: 33.333%
@@ -312,6 +325,18 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .s-how
+    .section-title
+      h3
+        font-size: 22px
+        line-height: 1.2
+
+  .blue-form
+    border-width: 12px
+    .form-content
+      padding-left: 15px
+      padding-right: 15px
 
   .char-item
     width: 100%
