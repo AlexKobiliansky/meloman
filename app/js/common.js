@@ -107,6 +107,7 @@ $(document).ready(function(){
 
         if ($(window).width()>=768) {
             $('.textcom-item-name').height('auto').equalHeights();
+            $('.learn-item-title').height('auto').equalHeights();
         }
 
     }

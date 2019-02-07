@@ -1,0 +1,48 @@
+.s-learn
+  .section-title
+    h3
+      font-size: 28px
+
+.learn-wrap
+  margin-top: 70px
+
+
+
+.learn-item
+  padding: 75px 25px 0
+  position: relative
+  text-align: center
+  &:before
+    content: ''
+    position: absolute
+    width: 54px
+    height: 48px
+    +bg-cover
+    background-image: url('../img/icons/learn-item-check.png')
+    top: 0
+    left: calc(50% - 20px)
+  &:after
+    content: ''
+    position: absolute
+    top: 30px
+    right: -148px
+    height: 3px
+    width: 278px
+    background-image: url('../img/icons/dot-horisont.png')
+    background-repeat: repeat-x
+  &-title
+    font-size: 18px
+    line-height: 1.2
+    color: #000
+    margin-bottom: 25px
+  &-desc
+    font-size: 14px
+    color: #7a8389
+    line-height: 1.57
+
+
+.learn-item-wrap
+  &:last-child
+    .learn-item
+      &:after
+        display: none

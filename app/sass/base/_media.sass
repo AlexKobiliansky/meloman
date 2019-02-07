@@ -11,6 +11,10 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .learn-item:after
+    right: -122px
+    width: 230px
+
   .how-content
     padding-right: 0
 
@@ -98,6 +102,13 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .learn-item
+    padding-left: 0
+    padding-right: 0
+    &:after
+      right: -91px
+      width: 162px
 
   .blue-form
     label
@@ -207,6 +218,21 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .s-learn
+    padding-bottom: 0
+
+  .learn-item
+    margin-bottom: 100px
+    &:after
+      height: 65px
+      width: 4px
+      background-image: url('../img/icons/dot-vertical.png')
+      background-repeat: repeat-y
+      top: auto
+      bottom: -86px
+      right: auto
+      left: calc(50% - 2px)
 
   .char-item
     width: 50%
@@ -326,10 +352,10 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
-  .s-how
+  .s-how, .s-learn
     .section-title
       h3
-        font-size: 22px
+        font-size: 24px
         line-height: 1.2
 
   .blue-form
