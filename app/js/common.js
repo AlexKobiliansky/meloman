@@ -117,6 +117,26 @@ $(document).ready(function(){
     heightses();
 
 
+    $(function() {
+        $("a[href='#teacher-form']").magnificPopup({
+            type: "inline",
+            fixedContentPos: !1,
+            fixedBgPos: !0,
+            overflowY: "auto",
+            closeBtnInside: !0,
+            preloader: !1,
+            midClick: !0,
+            removalDelay: 300,
+            mainClass: "my-mfp-zoom-in"
+        })
+    });
+
+    $("a[href='#teacher-form']").on('click', function(){
+        var name = $(this).data('name');
+        $('#teacher-form h3 span').text(name);
+        $('#teacher-form #name').val(name);
+    });
+
     /**
      * YOUTUBE SCRIPT
      */
