@@ -45,6 +45,7 @@ $(document).ready(function(){
      */
 
     $('.about-images').photoswipe();
+    $('.gallery-wrap').photoswipe();
 
     $('.teachers-slider').owlCarousel({
         loop:true,
