@@ -1,4 +1,6 @@
 .main-head
+  position: relative
+  z-index: 3
 
 .top-line
   padding: 13px 0
@@ -72,8 +74,11 @@
   color: #fff
   line-height: 1
   box-shadow: 0 9px rgba($accent-blue, .6), 0 18px rgba($accent-blue, .4)
+
 .main-mnu
   padding: 28px 0
+  position: relative
+  z-index: 3
   li
     display: inline-block
     font-family: "proximaNova", sans-serif
@@ -95,8 +100,29 @@
       &:after
         width: 100%
         left: 0
+      ul
+        opacity: 1
+        visibility: visible
     &:last-child
       margin-right: 0
+    ul
+      top: 25px
+      left: 0
+      position: absolute
+      padding: 20px 25px 10px
+      background-color: $accent-blue
+      width: 300px
+      z-index: 30
+      color: #fff
+      +mt(.4s)
+      opacity: 0
+      visibility: hidden
+      li
+        margin: 20px 0
+        display: block
+        &:hover
+          &:after
+            display: none
 
 
 .hamburger
@@ -128,4 +154,14 @@
   a
     padding-top: 14px
     padding-bottom: 12px
+
+.mm-navbar
+  border: none
+
+
+.mm-menu_theme-dark .mm-navbar a, .mm-menu_theme-dark .mm-navbar>*
+  font-size: 20px
+  color: #fff
+  letter-spacing: 2px
+
 //end mmenu
