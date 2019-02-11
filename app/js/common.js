@@ -455,12 +455,16 @@ $(document).ready(function(){
         })
     });
 
-    $('#agreement-label').on('click', function(){
-        var th = $(this);
-        th.toggleClass('checked');
-        if(th.hasClass('has-error')) {
-            th.removeClass('has-error')
+    $('#agreement-label').on('click', function(e){
+
+        if(!$(e.target).is('a, a *')){
+            var th = $(this);
+            th.toggleClass('checked');
+            if(th.hasClass('has-error')) {
+                th.removeClass('has-error')
+            }
         }
+        
     });
 
     //E-mail Ajax Send
