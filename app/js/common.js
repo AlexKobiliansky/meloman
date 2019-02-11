@@ -464,7 +464,7 @@ $(document).ready(function(){
                 th.removeClass('has-error')
             }
         }
-        
+
     });
 
     //E-mail Ajax Send
