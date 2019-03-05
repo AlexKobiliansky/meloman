@@ -408,7 +408,7 @@ $(document).ready(function(){
 
 
     $(function() {
-        $("a[href='#teacher-form']").magnificPopup({
+        $("a[href='#teacher-form'], a[href='#privacy']").magnificPopup({
             type: "inline",
             fixedContentPos: !1,
             fixedBgPos: !0,
@@ -485,7 +485,7 @@ $(document).ready(function(){
 
         $.ajax({
             type: "POST",
-            url: "mail.php", //Change
+            url: "/mail.php", //Change
             data: th.serialize()
         }).done(function() {
             setTimeout(function() {
