@@ -43,10 +43,21 @@
     width: 100%
     button.owl-prev, button.owl-next
       width: 25px
-      height: 27px
+      height: 25px
       +bg-cover
       +mt(.3s)
       position: absolute
+      z-index: 2
+      &:before
+        content: ''
+        position: absolute
+        width: 60px
+        height: 60px
+        border: 3px solid rgba(56,152,215,.4)
+        border-radius: 50%
+        background-color: transparent
+        left: calc(50% - 30px)
+        top: calc(50% - 30px)
     button.owl-prev
       background-image: url('../img/icons/how-prev.png')
       left: -120px

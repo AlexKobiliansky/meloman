@@ -87,7 +87,6 @@ $(document).ready(function(){
         dots: true
     });
 
-
     function heightses() {
         if ($(window).width()>480) {
             $('.check-item-title').height('auto').equalHeights();
@@ -95,13 +94,14 @@ $(document).ready(function(){
             $('.teacher-slide-post').height('auto').equalHeights();
             $('.event-item-title').height('auto').equalHeights();
             $('.char-item-title').height('auto').equalHeights();
+            $('.teacherlist-item-title').height('auto').equalHeights();
+            $('.teacherlist-item-post').height('auto').equalHeights();
         }
 
         if ($(window).width()>=768) {
             $('.textcom-item-name').height('auto').equalHeights();
             $('.learn-item-title').height('auto').equalHeights();
         }
-
     }
 
     $(window).resize(function() {
@@ -387,6 +387,8 @@ $(document).ready(function(){
      * end YA-MAPS
      */
 
+
+    $(".main-mnu a").mPageScroll2id();
 
     /**
      * FORMS

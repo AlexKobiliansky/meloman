@@ -98,7 +98,7 @@
       background-color: $accent-orange
       left: 50%
       +mt(.3s)
-    &:hover
+    &:hover, &.current-menu-item
       color: $accent-orange
       &:after
         width: 100%
@@ -123,9 +123,11 @@
       li
         margin: 20px 0
         display: block
-        &:hover
+        &:hover, &.current-menu-item
           &:after
             display: none
+  a
+    cursor: pointer
 
 
 .hamburger

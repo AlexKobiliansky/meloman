@@ -88,3 +88,42 @@
     &:hover
       text-decoration: underline
 
+.soc-wrap
+  margin-top: 25px
+
+.soc-icon
+  display: inline-block
+  font-size: 20px
+  margin: 0 14px
+  position: relative
+
+  text-align: center
+  z-index: 2
+  a
+    position: relative
+    z-index: 2
+    +mt(.3s)
+    display: inline-block
+    width: 20px
+    &:before
+      content: ''
+      position: absolute
+      background-color: transparent
+      border-radius: 50%
+      border: 1px solid $accent-blue
+      width: 40px
+      height: 40px
+      left: -10px
+      top: -8px
+      z-index: 1
+      +mt(.3s)
+  &:hover
+    a
+      color: darken($accent-blue, 20%)
+      &:before
+        border-color: darken($accent-blue, 20%)
+  &:nth-child(3), &:nth-child(4)
+    a
+      &:before
+        left: -9px
+
